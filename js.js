@@ -1,15 +1,16 @@
 function mostrar(){
   var texto = document.getElementById("escribir").value;
-      document.getElementById("preview").value = texto;
+  var copia =document.getElementById("preview");
+      copia.innerHTML = texto;
 }
 function enviar(){
   var contenedorCom= document.getElementById("contenedor");
   var preview= document.getElementById("preview");
   var nodo= preview.cloneNode(true);
   nodo.id= new Date();
-  var ele =document.getElementById("escribir").innerHTML="";
+  var ele =document.getElementById("escribir");
      contenedorCom.appendChild(nodo);
-     ele.innerHTML="";
+     ele.innerText="";
      preview.innerHTML="";
 }
 function textoG(){
