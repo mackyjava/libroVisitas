@@ -6,29 +6,25 @@
 
   </head>
   <body>
-    <h2>Libro de Visitas</h2>
-    <div>
-      <p name"texto"id="mostrar"><hr>comentarios</hr></p>
-      <hr></hr>
-      <ol id="color"></ol>
-      <li> hola</li>
-      <hr></hr>
-      <input type="button" value="Texto grande"  onclick="aumentar();"/>
-      <input type="button" value="Texto mediano" onclick="disminuir();"/>
-      <input type="button" value="Texto chico"   onclick="pequeño();"/>
-      <input type="button" value="Color de texto"onclick="colorT();"/>
-      <input type="button" value="Color de fondo"onclick="colorF();"/>
-      <input type="button" value="Alinear izquierda" onclick="alinearI();"/>
-      <input type="button" value="Centrar" onclick="centro();"/>
-      <input type="button" value="Alinear derecha" onclick="alinearD"/><br/>
-      <textarea id="escribir" placeholder="Escribe un comentario"  oninput="mostrar();" style="margin: 0px; width: 780px; height: 225px;"></textarea>
+      <h2>Libro de Visitas</h2>
+        <article>
+          <section  id ="contenedor" style ="font-size:24px; color:yellow"></section>
+        </article>
+        <hr>
+        <h3>Comentarios</h3>
+          <button  value="Texto grande"  onclick="textoG();">Texto Grande</button>
+          <button  value="Texto mediano" onclick="textoM();">Texto Mediano</button>
+          <button  value="Texto chico"   onclick="textoP();">Texto chico</button>
+          <button  value="Color de texto"onclick="colorT();">Color Texto</button>
+          <button  value="Color de fondo"onclick="colorF();">Color Fondo</button>
+          <button  value="Alinear izquierda" onclick="alinearI();">Alinear Izquierda</button>
+          <button  value="Centrar" onclick="centro();">Centar</button>
+          <button  value="Alinear derecha" onclick="alinearD();">Alinear Derecha</button><br/>
+          <textarea id="escribir" placeholder="Escribe un comentario" oninput="mostrar();" style="margin: 0px; width: 780px; height: 225px;"></textarea>
       <h3><strong>Contenido</strong></h3>
-      <textarea id ="copiar"></textarea>
-      <input type="submit" value="enviar" onclick="copiar()";/>
-    </div>
-    <script src="visitas.js"></script>
-
-  </body>
-
-
-</html>
+      <textarea id ="preview"></textarea>
+      <hr>
+      <input type="submit" value="enviar comentarios" onclick="enviar()";/>
+      <script src="js.js"></script>
+    </body>
+  </html>

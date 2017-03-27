@@ -6,7 +6,11 @@ function enviar(){
   var contenedorCom= document.getElementById("contenedor");
   var preview= document.getElementById("preview");
   var nodo= preview.cloneNode(true);
+  nodo.id= new Date();
+  var ele =document.getElementById("escribir").innerHTML="";
      contenedorCom.appendChild(nodo);
+     ele.innerHTML="";
+     preview.innerHTML="";
 }
 function textoG(){
 var preview =document.getElementById("preview");
@@ -24,6 +28,7 @@ function textoP(){
 function alinearI(){
     var preview =document.getElementById("preview");
         preview.style.textAlign = "left";
+      }
 function centro(){
        var preview =document.getElementById("preview");
          preview.style.textAlign = "center";
@@ -31,4 +36,14 @@ function centro(){
 function alinearD(){
          var preview =document.getElementById("preview");
              preview.style.textAlign = "right";
+     }
+function colorT(){
+   var preview =document.getElementById("preview");
+   var color= prompt("Elige un color");
+       preview.style.color = color;
+    }
+function colorF(){
+    var preview =document.getElementById("preview");
+    var color= prompt("Elige un color de fondo");
+        preview.style.background = color;
      }
