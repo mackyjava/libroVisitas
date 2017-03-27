@@ -3,27 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Libro de visitas</title>
+
   </head>
   <body>
     <h2>Libro de Visitas</h2>
-    <span>
+    <div>
       <p name"texto"id="mostrar"><hr>comentarios</hr></p>
       <hr></hr>
-      <p id="color"<style="text/css"color:blue>>hola</style></p>
+      <ol id="color"></ol>
+      <li> hola</li>
       <hr></hr>
-      <input type="button" value="Texto grande"/>
-      <input type="button" value="Texto mediano"/>
-      <input type="button" value="Texto chico"/>
-      <input type="button" value="Color de texto"/>
-      <input type="button" value="Color de fondo"/>
-      <input type="button" value="Alinear izquierda"/>
-      <input type="button" value="Centrar"/>
-      <input type="button" value="Alinear derecha"/><br/>
-      <textarea id="escribir" placeholder="Escribe un comentario" style="margin: 0px; width: 780px; height: 225px;"></textarea>
+      <input type="button" value="Texto grande"  onclick="aumentar();"/>
+      <input type="button" value="Texto mediano" onclick="disminuir();"/>
+      <input type="button" value="Texto chico"   onclick="pequeño();"/>
+      <input type="button" value="Color de texto"onclick="colorT();"/>
+      <input type="button" value="Color de fondo"onclick="colorF();"/>
+      <input type="button" value="Alinear izquierda" onclick="alinearI();"/>
+      <input type="button" value="Centrar" onclick="centro();"/>
+      <input type="button" value="Alinear derecha" onclick="alinearD"/><br/>
+      <textarea id="escribir" placeholder="Escribe un comentario"  oninput="mostrar();" style="margin: 0px; width: 780px; height: 225px;"></textarea>
       <h3><strong>Contenido</strong></h3>
-      <div id ="copiar"></div>
-      <input type="submit" value="enviar"/>
-    </span>
+      <textarea id ="copiar"></textarea>
+      <input type="submit" value="enviar" onclick="copiar()";/>
+    </div>
+    <script src="visitas.js"></script>
 
   </body>
+
+
 </html>
